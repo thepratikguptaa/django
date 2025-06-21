@@ -6,16 +6,15 @@ Django is a full-featured web framework that follows the Model-View-Controller (
 ## Environment Setup
 To get started with Django, you’ll need to install it on your computer. You can do this by running the following command in your terminal, after setting up a virtual environment:
 
-```
+```bash
 # Windows
 python -m venv .venv
-
-# to activate the virtual environment
-.venv\Scripts\activate
-
-# Mac/Linux
-python3 -m venv .venv
-
-# to activate the virtual environment
-source .venv/bin/activate
 ```
+
+```bash
+# Linux/MacOS
+python3 -m venv .venv
+```
+But for this time, I used [uv](https://docs.astral.sh/uv/) to manage virtual environment and other tools. It’s ridiculously easy and fast and cross-platform.
+
+![UV logo](https://github.com/astral-sh/uv/assets/1309177/03aa9163-1c79-4a87-a31d-7a9311ed9310#only-dark)
