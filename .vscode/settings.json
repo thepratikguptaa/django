@@ -1,5 +1,10 @@
 {
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
     "workbench.activityBar.location": "top",
-    "workbench.activityBar.iconClickBehavior": "toggle"
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "editor.rename.enablePreview": true,
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.autoLockGroups": {
+        "default": true
+    }
 }
