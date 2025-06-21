@@ -3,7 +3,7 @@
     "workbench.activityBar.location": "top",
     "workbench.activityBar.iconClickBehavior": "toggle",
     "editor.rename.enablePreview": true,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "workbench.editor.autoLockGroups": {
         "default": true
     },
