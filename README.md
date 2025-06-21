@@ -4,7 +4,7 @@ Django is a high-level Python Web framework that encourages rapid development an
 Django is a full-featured web framework that follows the Model-View-Controller (MVC) architectural pattern. It provides a set of tools and libraries for building web applications, including an ORM, a templating engine, and a built-in admin interface.
 
 ## Environment Setup
-To get started with Django, you’ll need to install it on your computer. You can do this by running the following command in your terminal, after setting up a virtual environment:
+To get started with Django, you’ll need to install Python and create a virtual environment. You can create a virtual environment using the following commands:
 
 ```bash
 # Windows
