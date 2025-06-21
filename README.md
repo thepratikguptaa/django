@@ -22,7 +22,7 @@ But for this time, I used [uv](https://docs.astral.sh/uv/) to manage virtual env
 ## Installing Django
 Now that you have a virtual environment set up, you can install Django using the following command:
 ```bash
-uv pip install Django
+uv pip install django
 ```
 ## Creating a Django Project
 To create a Django project, you can use the following command:
