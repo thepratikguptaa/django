@@ -6,5 +6,9 @@
     "workbench.editor.enablePreview": true,
     "workbench.editor.autoLockGroups": {
         "default": true
-    }
+    },
+    "workbench.editor.alwaysShowEditorActions": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.highlightModifiedTabs": false
 }
