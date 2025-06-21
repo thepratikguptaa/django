@@ -32,8 +32,8 @@ django-admin startproject ProjectOne
 ```base
 cd ProjectOne
 ```
-# To start a Django development server,
-you can use the following command:
+## Running a Django development server
+To start a Django development server, you can use the following command:
 ```bash
 python manage.py runserver
 ```
