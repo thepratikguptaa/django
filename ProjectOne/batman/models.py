@@ -14,6 +14,7 @@ class SaveGotham(models.Model):
     image = models.ImageField(upload_to="save-gotham/")
     date_added = models.DateTimeField(default=timezone.now)
     type = models.CharField(max_length=2, choices=WEAPON_CHOICE)
+    description = models.TextField(default="No description provided.")
 
     def __str__(self):
         return self.name # return the name of the save

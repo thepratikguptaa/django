@@ -1,9 +1,30 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Im Batman
+I'm Batman
 {% endblock %}
 
 {% block content %}
-<h1>Who stole my batmobile?</h1>
+<h1 class="text-7xl m-8 font-bold">Candidates for Batman</h1>
+
+<div class="grid grid-cols-4 gap-4 m-4"> 
+{% for batman in batmen %}
+<div class="bg-gray-200 p-4 rounded-lg flex flex-col items-center justify-center text-black shadow-lg">
+    <img class="w-auto h-full rounded-lg shadow-lg" src="{{ batman.image.url }}" alt="{{ batman.name }}">
+    <h2 class='text-2xl m-4'>Candidate Name: {{ batman.name }}</h2>
+    <a href="#">
+        <button
+        type="button"
+        class="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-[100%] m-2 shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+        >
+            {{ batman.type }} - {{ batman.id }}
+        </button>
+    </a>
+</div>
+
+
+{% endfor %}
+</div>
+
 {% endblock %}
+
