@@ -24,4 +24,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('batman/', include('batman.urls')),
+    
+
+    path("__reload__/", include("django_browser_reload.urls")), # always at the end in the middleware list
 ]
