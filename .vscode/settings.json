@@ -10,5 +10,6 @@
     "workbench.editor.alwaysShowEditorActions": true,
     "workbench.editor.enablePreviewFromCodeNavigation": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.highlightModifiedTabs": false
+    "workbench.editor.highlightModifiedTabs": false,
+    "reactSnippets.settings.prettierEnabled": true
 }
