@@ -16,4 +16,4 @@ class SaveGotham(models.Model):
     type = models.CharField(max_length=2, choices=WEAPON_CHOICE)
 
     def __str__(self):
-        return self.name
+        return self.name # return the name of the save
