@@ -37,3 +37,10 @@ To start a Django development server, you can use the following command:
 ```bash
 python manage.py runserver
 ```
+
+---
+
+🎉 **Happy Experimenting!** 🎉
+
+
+*May your bugs be few and your features many!*
