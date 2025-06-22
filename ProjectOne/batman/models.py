@@ -5,15 +5,15 @@ from django.utils import timezone
 
 class SaveGotham(models.Model):
     WEAPON_CHOICE = [
-        ("BR", "Batarang"),
-        ("GG", "Grapnel Gun"),
-        ("BM", "Batmobile"),
-        ("BP", "Batplane"),
+        ("Batarang", "Batarang"),
+        ("Grapnel Gun", "Grapnel Gun"),
+        ("Batmobile", "Batmobile"),
+        ("Batplane", "Batplane"),
     ]
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to="save-gotham/")
     date_added = models.DateTimeField(default=timezone.now)
-    type = models.CharField(max_length=2, choices=WEAPON_CHOICE)
+    type = models.CharField(max_length=100, choices=WEAPON_CHOICE)
     description = models.TextField(default="No description provided.")
 
     def __str__(self):
