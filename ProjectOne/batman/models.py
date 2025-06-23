@@ -25,7 +25,7 @@ class SaveGotham(models.Model):
 
 #one to many relationship model
 
-class CandidateReviews(models.Model):
+class CandidateReview(models.Model):
     RATING_OPTIONS = [
         ("1/5", "1/5: Not Worthy"),
         ("2/5", "2/5: Poor"),
@@ -47,19 +47,13 @@ class CandidateReviews(models.Model):
 
 #many to many relationship model
 
-class VillainAlliances(models.Model):
-    ALLIANCE_TYPES = [
-        ("Temporary", "Temporary alliance"),
-        ("Long-term", "Long-term partnership"),
-        ("Rivalry", "Friendly rivalry"),
-    ]
-    name = models.CharField(max_length=100)
-    villains = models.ManyToManyField(SaveGotham, related_name="alliances")
-    alliance_type = models.CharField(max_length=50, choices=ALLIANCE_TYPES)
+class HeroesAlliance(models.Model):
+    villian = models.CharField(max_length=100)
+    heroes = models.ManyToManyField(SaveGotham, related_name="alliances")
     description = models.TextField(default="No description provided.")
-
+    date_added = models.DateTimeField(default=timezone.now)
     def __str__(self):
-        return f'{self.name} alliance ({self.alliance_type})'
+        return self.villian
 
 
 

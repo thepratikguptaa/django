@@ -1,23 +1,23 @@
 from django.contrib import admin
-from .models import SaveGotham, CandidateReviews, VillainAlliances, SpecialAbility
+from .models import SaveGotham, CandidateReview, HeroesAlliance, SpecialAbility
 
 # Register your models here.
-class CandidateReviewsInline(admin.TabularInline):
-    model = CandidateReviews
+class CandidateReviewInline(admin.TabularInline):
+    model = CandidateReview
     extra = 2 # number of columns to show
 
 class SaveGothamAdmin(admin.ModelAdmin):
     list_display = ('name', 'type', 'date_added')
-    inlines = [CandidateReviewsInline]
+    inlines = [CandidateReviewInline]
 
-class VillainAlliancesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'alliance_type', )
-    filter_horizontal = ('villains',)
+class HeroesAllianceAdmin(admin.ModelAdmin):
+    list_display = ('villian', 'date_added', 'description' )
+    filter_horizontal = ('heroes',)
 
 class SpecialAbilityAdmin(admin.ModelAdmin):
     list_display = ('name', 'ability', 'description')
 
 
 admin.site.register(SaveGotham, SaveGothamAdmin)
-admin.site.register(VillainAlliances, VillainAlliancesAdmin)
+admin.site.register(HeroesAlliance, HeroesAllianceAdmin)
 admin.site.register(SpecialAbility, SpecialAbilityAdmin)
