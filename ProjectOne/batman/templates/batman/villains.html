@@ -1,25 +1,31 @@
 {% extends "layout.html" %}
 
+{% block title %}Villians{% endblock %}
+
 {% block content %}
-<h1 class="text-7xl m-4 font-bold">Villains</h1>
-<form method="POST" class="bg-white rounded-lg shadow-lg p-4 m-8 text-black">
+<h1 class="text-7xl m-4 font-bold text-gray-800">Villains</h1>
+<form method="POST" class="bg-white rounded-xl shadow-xl p-6 m-8 text-black max-w-2xl mx-auto">
     {% csrf_token %}
-    {{form.as_p}}
+    <div class="space-y-4">
+        {{form.as_p}}
+    </div>
     <button
         type="submit"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4 cursor-pointer shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mx-auto block"
+        class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 mt-6 cursor-pointer shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 mx-auto block"
     >
         Submit
     </button>
 </form>
 
 {% if villians %}
-    <h2 class="text-4xl font-bold">This hero is hunting a villian</h2>
-    <ul>
+    <h2 class="text-4xl text-gray-800 mb-6 mt-10 text-center">This hero is hunting villian(s):</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         {% for villian in villians %}
-            <li>{{ villian.villian }}</li>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
+                <p class="text-2xl font-medium text-gray-800">{{ villian }}</p>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endif %}
 
 {% endblock %}

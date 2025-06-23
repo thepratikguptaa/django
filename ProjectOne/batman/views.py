@@ -15,12 +15,13 @@ def weapon_details(request, batman_id):
 
 #forms
 def villians_view(request):
-    villains = None
+    villians = None
     if request.method == 'POST': # if the form has been submitted...
         form = BatmanForm(request.POST)
         if form.is_valid():
-            heroes = form.cleaned_data['name']
-            villains = HeroesAlliance.objects.filter(heroes=heroes)
+            hero = form.cleaned_data['name']
+            alliances = HeroesAlliance.objects.filter(heroes=hero)
+            villians = [alliance.villian for alliance in alliances]  #For each 'alliance' in alliances, it gets the villian attribute.
     else: # if the form has not been submitted...
         form = BatmanForm()
-    return render(request, 'batman/villains.html', {'villains': villains, 'form': form})
+    return render(request, 'batman/villains.html', {'villians': villians, 'form': form})
