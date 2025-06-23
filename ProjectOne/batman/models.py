@@ -22,7 +22,9 @@ class SaveGotham(models.Model):
 
 
 
+
 #one to many relationship model
+
 class CandidateReviews(models.Model):
     RATING_OPTIONS = [
         ("1/5", "1/5: Not Worthy"),
@@ -42,7 +44,9 @@ class CandidateReviews(models.Model):
 
 
 
+
 #many to many relationship model
+
 class VillainAlliances(models.Model):
     ALLIANCE_TYPES = [
         ("Temporary", "Temporary alliance"),
@@ -53,7 +57,19 @@ class VillainAlliances(models.Model):
     villains = models.ManyToManyField(SaveGotham, related_name="alliances")
     alliance_type = models.CharField(max_length=50, choices=ALLIANCE_TYPES)
     description = models.TextField(default="No description provided.")
-    date_formed = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f'{self.name} alliance ({self.alliance_type})'
+
+
+
+
+#one to one relationship model
+
+class SpecialAbility(models.Model):
+    name = models.OneToOneField(SaveGotham, on_delete=models.CASCADE, related_name="special_ability")
+    ability = models.CharField(max_length=100)
+    description = models.TextField(default="No description provided.")
+
+    def __str__(self):
+        return f'Special ability for {self.name.name}'
