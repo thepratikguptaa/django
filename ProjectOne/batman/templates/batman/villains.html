@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="text-7xl m-4 font-bold">Villains</h1>
+<form method="POST" class="bg-white rounded-lg shadow-lg p-4 m-8 text-black">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4 cursor-pointer shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mx-auto block"
+    >
+        Submit
+    </button>
+</form>
+
+{% if villians %}
+    <h2 class="text-4xl font-bold">This hero is hunting a villian</h2>
+    <ul>
+        {% for villian in villians %}
+            <li>{{ villian.villian }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}
