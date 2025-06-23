@@ -19,7 +19,8 @@ class SaveGotham(models.Model):
 
     def __str__(self):
         return self.name # return the name of the save
-    
+
+
 
 #one to many relationship model
 class CandidateReviews(models.Model):
@@ -38,3 +39,21 @@ class CandidateReviews(models.Model):
 
     def __str__(self):
         return f'{self.user.username} review for {self.candidate.name}'
+
+
+
+#many to many relationship model
+class VillainAlliances(models.Model):
+    ALLIANCE_TYPES = [
+        ("Temporary", "Temporary alliance"),
+        ("Long-term", "Long-term partnership"),
+        ("Rivalry", "Friendly rivalry"),
+    ]
+    name = models.CharField(max_length=100)
+    villains = models.ManyToManyField(SaveGotham, related_name="alliances")
+    alliance_type = models.CharField(max_length=50, choices=ALLIANCE_TYPES)
+    description = models.TextField(default="No description provided.")
+    date_formed = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f'{self.name} alliance ({self.alliance_type})'
