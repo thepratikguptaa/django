@@ -1,3 +1,6 @@
+### LinkedIn Post
+[![LinkedIn Post](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/thepratikguptaa_django-python-webdevelopment-activity-7342960914108760065-N7Tr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNTblUBnfiK5ntkG3s1-NXJ0TPqdRrZrz0)
+
 # What is Django?
 Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel.
 
