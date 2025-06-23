@@ -46,6 +46,7 @@ python manage.py runserver
 *May your bugs be few and your features many!*
 
 ## Project Structure
+```
 └── 📁django
     └── 📁.vscode
         └── settings.json
@@ -142,3 +143,4 @@ python manage.py runserver
             └── 📁templates
                 └── base.html
     └── README.md
+```
