@@ -10,7 +10,7 @@ I'm Batman
 <div class="grid grid-cols-4 gap-4 m-4"> 
 {% for batman in batmen %}
 <div class="bg-gray-200 p-4 rounded-lg flex flex-col items-center justify-center text-black shadow-lg">
-    <img class="w-auto h-auto rounded-lg shadow-lg" src="{{ batman.image.url }}" alt="{{ batman.name }}">
+    <img class="w-full h-full rounded-lg shadow-lg" src="{{ batman.image.url }}" alt="{{ batman.name }}">
     <h2 class='text-2xl m-4'>Candidate Name: {{ batman.name }}</h2>
     <a href="{% url 'weapon_details' batman.id %}">
         <button
